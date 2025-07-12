@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Part Number - CKS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f3c308;
+            background-size: cover;
+            color: #222;
+        }
+
+        header {
+             background: #2b2a29;
+            color: #f3c308;
+            padding: 15px 30px;
+            position : sticky;
+            top: 0;
+            z-index: 1000;
+            }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+         nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 10px 0 0;
+            flex-wrap: wrap;
+            position: relative;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav a {
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 5px;
+            display: block;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background: #DAA501;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 10px 0;
+            border-radius: 6px;
+            min-width: 220px;
+            z-index: 999;
+            display: none;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 16px;
+            white-space: nowrap;
+            display: block;
+            color: #f9f9f9;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #f3c308;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.6);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 50%;
+        }
+
+        .nav-prev { left: 10px; }
+
+        .nav-next { right: 10px; }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .part-title {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2b2a10;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 1rem;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 230px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            text-align: left;
+        }
+
+        .info-card h3 {
+            font-size: 1rem;
+            margin: 0 0 10px;
+            color: #f3c308;
+        }
+
+        .info-card p {
+            margin: 0;
+            color: #333;
+        }
+
+        .product-image {
+            max-width: 300px;
+            border-radius: 12px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .btn-group {
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn.back {
+            background: #eee;
+            color: #333;
+        }
+
+        .btn.details {
+            background:#f3c308;
+            color: #2b2a29;
+        }
+        .contact-container{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        form{
+            background: #eee;
+            display: flex;
+            flex-direction: column;
+            padding:2vm 4vw;
+            width: 250%;
+            max-width: 1000px;
+            border-radius:10px;
+        }
+
+        form input{
+            border:1;
+            margin: 10px 10px;
+            padding:20px;
+            outline: thin;
+            background:#ffffff;
+            font-size:16px;
+        }
+        form button{
+            padding: 10px;
+            background:#f3c308;
+            color: #2b2a29;
+            font-size: 18px;
+            border: 1;
+            outline:thin;
+            cursor:pointer;
+            width:150px;
+            margin: 20px auto 25px;
+            border-radius:30px;
+        }
+
+
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            padding: 20px;
+            margin-top: 60px;
+            background: #2b2a29;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CKS Cable Solutions</h1>
+     <nav>
+        <ul>
+            <li><a href="index.html">About Us</a></li>
+
+            <li class="has-dropdown">
+                <a href="#">Our Products</a>
+                <ul>
+                    <li><a href="#drag-chains">Drag Chains</a></li>
+                    <li><a href="#crd">Cable Reeling Drums</a></li>
+                    <li><a href="#cables">Cables</a></li>
+                    <li><a href="#conduit-pipes">Conduit Pipes</a></li>
+                </ul>
+            </li>
+
+            <li class="has-dropdown">
+                <a href="#">Select Your Carrier</a>
+                <ul>
+                    <li><a href="select-carrier-type.htm">Select Carrier Type</a></li>
+                    <li><a href="select-inner-height.html">(A) Select Inner Height</a></li>
+                    <li><a href="select-carrier-model.html">Select Carrier Model</a></li>
+                    <li><a href="select-inner-width.html">(B) Select Inner Width</a></li>
+                    <li><a href="select-radius.html">(R) Select Radius</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+    <div id="partDisplay" class="part-title">Loading...</div>
+    <p class="description">Select Carrier button helps you select the product you require, and view detailed information and access images of it.</p>
+
+
+    <div class="btn-group">
+        <button class="btn back" onclick="history.back()">Back to Select Carrier</button>
+        <button class="btn details">Product Details</button>
+    </div>
+
+    <section>
+    <div class="contact-container">
+        <form action:"" class:"contact-left">
+            <div class: "contact-left-title">
+
+            <h2>Enquiry Now</h2>
+            <hr>
+            </div>
+
+
+            <input type="text" id="company  name" placeholder="Your Name" class:"contact-inputs" required>
+            <input type="text" id="phone" placeholder="Phone Number"  class:"contact-inputs" required >
+            <input type="text" id="address" placeholder="Address"  class:"contact-inputs" required >
+            <input type="email" id="email" placeholder="Email ID"  class:"contact-inputs" required>
+            <button type="submit"> Send Enquiry </button>
+        </form>
+    </div>
+    </main>
+
+<footer>
+    &copy; 2025 CKS Cable Solutions. All rights reserved.
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type")?.toUpperCase() || "CK";
+    const height = params.get("height") || "?";
+    const model = params.get("model") || "?";
+    const width = params.get("width") || "?";
+    const radius = params.get("radius") || "?";
+
+    const prefix = type === "STEEL"?"CS":"CK";
+    const partNo = `${prefix} ${height} ${model} ${width} R${radius}`;
+    document.getElementById("partDisplay").textContent = partNo;
+</script>
+ <script> src="https://smtpjs.com/v3/smtp.js" </script>
+    <script>
+    function sendEmail(){
+        Email.send({
+        Host : "smtp.gmail.com",
+        Username : "ckscable1@gmail.com",
+        Password : "CKScable@.01",
+        To : 'azrasiddiquee211@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Equiry",
+        Body : "And this is the body"
+}).then(
+    message => alert(message)
+);
+    }</script>
+   
+
+</body>
+</html>
